@@ -1,0 +1,15 @@
+Feature: Order Product online from Demo Web Shop
+As a user
+I want to be able to order product of my choice successfully
+
+  Scenario: Validate the result of search is as per the input search string  # src/test/java/features/WebShopShopping.feature:6
+    Given User is on Landing Page demowebshop                                # stepdefaddtocart.user_is_on_Landing_Page_demowebshop()
+    And User inputs the search string                                        # stepdefaddtocart.user_inputs_the_search_string()
+    And User clicks on the search button                                     # stepdefaddtocart.user_clicks_on_the_search_button()
+    Then user should see the search result name containing the search string # stepdefaddtocart.user_should_see_the_search_result_name_containing_the_search_string()
+
+  Scenario: Validate Add to Cart is successful            # src/test/java/features/WebShopShopping.feature:12
+    Given User is on Product Page health Book             # stepdefaddtocart.user_is_on_Product_Page_health_Book()
+    And User enters required quantity                     # stepdefaddtocart.user_enters_required_quantity()
+    And User clicks on Add To Cart button                 # stepdefaddtocart.user_clicks_on_Add_To_Cart_button()
+    Then product should be added successfully to the cart # stepdefaddtocart.product_should_be_added_successfully_to_the_cart()
